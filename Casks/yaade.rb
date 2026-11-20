@@ -16,5 +16,10 @@ cask "yaade" do
 
   app "Yaade.app"
 
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Yaade.app"]
+  end
+
   zap trash: "~/Library/Application Support/Yaade"
 end
