@@ -7,8 +7,12 @@ cask "yaade" do
   desc "Run CLI coding agents across projects and review their changes"
   homepage "https://yaade.frantss.uy/"
 
+  livecheck do
+    skip "No version information available"
+  end
+
   depends_on arch: :arm64
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Yaade.app"
 
