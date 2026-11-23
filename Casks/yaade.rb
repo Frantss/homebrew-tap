@@ -2,7 +2,8 @@ cask "yaade" do
   version "0.16.0"
   sha256 "9869d2ba2001828b75bce4958c056aaf4e84c62c658fa1be323b7894d0a8033c"
 
-  url "https://releases.yaade.frantss.uy/Yaade-#{version}-arm64.dmg"
+  url "https://github.com/Frantss/yaade-releases/releases/download/v#{version}/Yaade-#{version}-arm64.dmg",
+      verified: "github.com/Frantss/yaade-releases/"
   name "Yaade"
   desc "Run CLI coding agents across projects and review their changes"
   homepage "https://yaade.frantss.uy/"
