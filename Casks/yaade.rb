@@ -1,6 +1,6 @@
 cask "yaade" do
-  version "0.16.0"
-  sha256 "9869d2ba2001828b75bce4958c056aaf4e84c62c658fa1be323b7894d0a8033c"
+  version "0.17.0"
+  sha256 "b587057b7a78881f48b23b3d7b47ba4d57a76007051a19417cf65ba32ddb5c05"
 
   url "https://github.com/Frantss/yaade-releases/releases/download/v#{version}/Yaade-#{version}-arm64.dmg",
       verified: "github.com/Frantss/yaade-releases/"
@@ -12,6 +12,7 @@ cask "yaade" do
     skip "No version information available"
   end
 
+  auto_updates true
   depends_on arch: :arm64
   depends_on macos: :ventura
 
