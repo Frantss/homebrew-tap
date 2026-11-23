@@ -1,9 +1,8 @@
 cask "yaade" do
-  version "0.17.0"
-  sha256 "b587057b7a78881f48b23b3d7b47ba4d57a76007051a19417cf65ba32ddb5c05"
+  version "0.18.0"
+  sha256 "4c45e391ca129175d8c0f835189a838f52bdfd9a587ab98c91f7487db28cccec"
 
-  url "https://github.com/Frantss/yaade-releases/releases/download/v#{version}/Yaade-#{version}-arm64.dmg",
-      verified: "github.com/Frantss/yaade-releases/"
+  url "https://github.com/Frantss/yaade-releases/releases/download/v#{version}/Yaade-#{version}-arm64.dmg"
   name "Yaade"
   desc "Run CLI coding agents across projects and review their changes"
   homepage "https://yaade.frantss.uy/"
@@ -18,9 +17,8 @@ cask "yaade" do
 
   app "Yaade.app"
 
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Yaade.app"]
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Yaade.app"]
   end
 
   zap trash: "~/Library/Application Support/Yaade"
