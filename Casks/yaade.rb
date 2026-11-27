@@ -1,6 +1,6 @@
 cask "yaade" do
-  version "0.21.0"
-  sha256 "3fe4422ec9310acea5789a3a375bc327d394c2010431f27e6c0979c36165ed49"
+  version "0.22.0"
+  sha256 "8415d533c800777b88504041cd405e53a59aa010dc4abb26d655d3f7987818cc"
 
   url "https://github.com/Frantss/yaade-releases/releases/download/v#{version}/Yaade-#{version}-arm64.dmg"
   name "Yaade"
